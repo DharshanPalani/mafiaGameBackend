@@ -27,7 +27,9 @@ io.on("connection", (socket) => {
 
   socket.on("PING", ({ msg }) => {
     console.log(msg);
-    socket.to(socket.id).emit("PONG", { return_message: "Sybau" + socket.id });
+    socket
+      .to(socket.id)
+      .emit("PONG", { return_message: "Sybau 67" + socket.id });
   });
 });
 
